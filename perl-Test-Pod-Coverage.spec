@@ -1,14 +1,16 @@
 %define modname	Test-Pod-Coverage
-%define modver	1.08
+
+# Avoid nasty build dependency loop
+%define dont_gprintify 1
 
 Summary:	Check for POD coverage in your Perl modules
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	15
+Version:	1.10
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	%{modname}-%{modver}.tar.bz2
+Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/Test-Pod-Coverage-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Pod::Coverage)
 BuildRequires:	perl(Test::Builder::Tester)
@@ -18,7 +20,7 @@ BuildRequires:	perl-devel
 This Perl module checks for POD coverage in files for your distribution.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -qn %{modname}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -28,7 +30,8 @@ This Perl module checks for POD coverage in files for your distribution.
 %make test
 
 %install
-%makeinstall_std
+%make_install
+find %{buildroot} -name perllocal.pod -o -name .packlist |xargs rm -f
 
 %files
 %doc Changes
