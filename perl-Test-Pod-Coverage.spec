@@ -6,7 +6,7 @@
 Summary:	Check for POD coverage in your Perl modules
 Name:		perl-%{modname}
 Version:	1.10
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
