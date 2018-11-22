@@ -6,10 +6,10 @@
 Summary:	Check for POD coverage in your Perl modules
 Name:		perl-%{modname}
 Version:	1.10
-Release:	4
+Release:	5
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		http://metacpan.org/pod/Test::Pod::Coverage
 Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/Test-Pod-Coverage-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Pod::Coverage)
