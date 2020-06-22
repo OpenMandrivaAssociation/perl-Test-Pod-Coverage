@@ -6,7 +6,7 @@
 Summary:	Check for POD coverage in your Perl modules
 Name:		perl-%{modname}
 Version:	1.10
-Release:	5
+Release:	6
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Test::Pod::Coverage
@@ -23,7 +23,7 @@ This Perl module checks for POD coverage in files for your distribution.
 %setup -qn %{modname}-%{version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
