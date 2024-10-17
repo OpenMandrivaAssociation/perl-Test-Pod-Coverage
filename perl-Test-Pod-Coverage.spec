@@ -9,7 +9,7 @@ Version:	1.10
 Release:	9
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Test::Pod::Coverage
+Url:		https://metacpan.org/pod/Test::Pod::Coverage
 Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/Test-Pod-Coverage-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Pod::Coverage)
