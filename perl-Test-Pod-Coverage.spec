@@ -12,6 +12,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/pod/Test::Pod::Coverage
 Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/Test-Pod-Coverage-%{version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl(Pod::Coverage)
 BuildRequires:	perl(Test::Builder::Tester)
 BuildRequires:	perl-devel
